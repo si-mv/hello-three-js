@@ -8,7 +8,7 @@ class Planet {
     this.radius = payload.radius
     this.speed = payload.speed
     this.pitch = Math.random() * 2 * Math.PI
-    this.map = new THREE.TextureLoader().load(`../public/${this.name}.jpg`)
+    this.map = new THREE.TextureLoader().load(`/${this.name}.jpg`)
     this.material = new THREE.MeshStandardMaterial({ map: this.map })
     this.geometry = new THREE.SphereGeometry(this.radius, 36, 36)
     this.mesh = new THREE.Mesh(this.geometry, this.material)

@@ -27,7 +27,7 @@ scene.add(pointLight, ambientLight)
 const controls = new OrbitControls(camera, renderer.domElement)
 
 // add background
-const spaceTexture = new THREE.TextureLoader().load('../public/space.jpg')
+const spaceTexture = new THREE.TextureLoader().load('/space.jpg')
 scene.background = spaceTexture
 
 // add stars
@@ -45,7 +45,7 @@ Array(100).fill().forEach(() => addStar())
 
 // add sun
 function getSun () {
-  const emissiveMap = new THREE.TextureLoader().load('../public/sun.jpg')
+  const emissiveMap = new THREE.TextureLoader().load('/sun.jpg')
   const material = new THREE.MeshStandardMaterial({ emissiveMap, emissive: 'yellow' })
   const geometry = new THREE.SphereGeometry(8, 24, 24)
   const sun = new THREE.Mesh(geometry, material)
